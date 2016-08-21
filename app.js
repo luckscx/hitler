@@ -10,6 +10,8 @@ app.get('/', function (req, res) {
     res.send('Hello World!');
 });
 
+app.use(express.static('static'));
+
 app.listen(iPort, function () {
   console.log('Hitler Game Server listening on port %d!',iPort);
 });

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secret Hitler</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/trans.css" rel="stylesheet">
+    <script src="js/vue.min.js"></script>
+  </head>
+  <body>
+  <div class="container">
+      <h1>Secret Hitler</h1>
+      <div id="app">
+          <div class="input-group">
+             <span class="input-group-addon" id="basic-addon1">Name</span>
+             <input v-model="name" v-on:input="change" class="form-control" id="iid" placeholder="Your Name">
+          </div>
+      </div>
+      <div id="footer">
+          <div class="navbar navbar-fixed-bottom text-right">
+              <div class="container">Created by <a href="mailto:grissomshen@tencent.com">Grissom Shen</a>. Power by <a href="https://vuejs.org.cn/" target="_blank">Vue</a> & <a href="https://nodejs.org/en/" target="_blank">Node.js</a></div>
+          </div>
+      </div>
+  </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data : {
+                name : 'haha'
+            },
+            methods : {
+            }
+        });
+        vm.refreshLocal(true);
+    </script>
+  </body>
+</html>

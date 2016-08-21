@@ -1,0 +1,16 @@
+{
+  "apps": [{
+    "name"          : "hitler",
+    "script"        : "./app.js",
+    "args"          : "8089",
+    "env"           : {
+        "NODE_PATH"   : "."
+    },
+    "out_file"      : "logs/out.log",
+    "err_file"      : "logs/out.log",
+    "merge_logs"    : true,
+    "max_restarts"  : 1,
+    "min_uptime"    : "5000",
+    "watch"         : ["lib","routes","config"]
+  }]
+}
