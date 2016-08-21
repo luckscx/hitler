@@ -1,26 +1,18 @@
 "use strict";
 
-require('babel-register')({
-  plugins: ['transform-async-to-generator']
+const logger = require('./lib/logger');
+
+const express = require('express');
+const app = express();
+const iPort = process.argv[2] || 8080;
+
+app.get('/', function (req, res) {
+    res.send('Hello World!');
 });
 
-const Koa = require('koa');
-const app = new Koa();
-
-app.use(async (ctx, next) => {
-  try {
-    await next(); // next is now a function
-  } catch (err) {
-    ctx.body = { message: err.message };
-    ctx.status = err.status || 500;
-  }
+app.listen(iPort, function () {
+  console.log('Hitler Game Server listening on port %d!',iPort);
 });
-
-app.use(async ctx => {
-  ctx.body = 'hello';
-});
-
-app.listen(3000);
 
 
 
