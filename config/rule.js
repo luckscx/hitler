@@ -32,6 +32,8 @@ const powerEnum = {
   kill  : 3
 };
 
+rule.powerEnum = powerEnum;
+
 const skip = powerEnum.skip;
 const check = powerEnum.check;
 const trans = powerEnum.trans;

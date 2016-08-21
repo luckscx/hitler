@@ -12,7 +12,8 @@ var assert = require('assert');
 describe('room', function() {
   const owner = new User('Grissom');
   const config = {
-    player_num : 6
+    player_num : 6,
+    set_deck : [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
   };
   const room_one = new Room(owner,config);
   logger.log(room_one);
@@ -48,6 +49,9 @@ describe('room', function() {
       it('chanceller drop ', () => {
         const dropCard = _.sample(game.hand_deck);
         game.chancellorChoose(game.chancellor_index,dropCard);
+      });
+      it('kill test ', () => {
+        game.power(game.president_index,game.chancellor_index);
       });
     });
   }

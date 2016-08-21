@@ -44,7 +44,7 @@ describe('room', function() {
     });
   }
 
-  for (let i = 0, len = 10; i < len; ++i ) {
+  for (let i = 0, len = 20; i < len; ++i ) {
     oneRound();
   }
 });
