@@ -19,8 +19,11 @@
     "babel-plugin-transform-async-to-generator": "^6.8.0",
     "babel-register": "^6.11.6",
     "koa": "^2.0.0",
+    "underscore": "^1.8.3",
+    "uuid": "^2.0.2"
   },
   "devDependencies": {
+    "jshint": "^2.9.3",
     "mocha": "^3.0.2",
     "should": "^11.1.0"
   }
