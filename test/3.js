@@ -38,13 +38,21 @@ describe('room', function() {
       });
       it('vote ', () => {
         for (let i = 0, len = game.player_num; i < len; ++i ) {
-          const res = game.vote(i,false);
+          const res = game.vote(i,true);
         }
+      });
+      it('presend drop ', () => {
+        const dropCard = _.sample(game.hand_deck);
+        game.presidentChoose(game.president_index,dropCard);
+      });
+      it('chanceller drop ', () => {
+        const dropCard = _.sample(game.hand_deck);
+        game.chancellorChoose(game.chancellor_index,dropCard);
       });
     });
   }
 
-  for (let i = 0, len = 10; i < len; ++i ) {
+  for (let i = 0, len = 8; i < len; ++i ) {
     oneRound();
   }
 });
