@@ -5,10 +5,13 @@ const logger = require('./lib/logger');
 const express = require('express');
 const app = express();
 const iPort = process.argv[2] || 8080;
+const routes = require('./routes');
 
-app.get('/', function (req, res) {
-    res.send('Hello World!');
-});
+const world = require('lib/world');
+
+global.logger = logger;
+
+app.use('/',routes);
 
 app.use(express.static('static'));
 
